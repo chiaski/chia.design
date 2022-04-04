@@ -1,0 +1,119 @@
+//
+//@font-face {
+//    font-family: 'Tobias';
+//    src: url('https://chia.design/fonts/Tobias-Regular.woff2') format('woff2'),
+//        url('https://chia.design/fonts/Tobias-Regular.woff') format('woff');
+//    font-weight: normal;
+//    font-style: normal;
+//    font-display: swap;
+//}
+//
+
+
+// stuff
+body {
+  font-weight: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+  scroll-margin-top: 15vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+// holds everything together
+.container {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+
+  .container-wrapper {
+    //    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+.box{
+  width: 100%;
+
+  .box-inner{
+    padding: .5em 1em;
+  }
+
+}
+
+
+// core elements
+
+h1, h2, h3{
+  margin: 0 0 .5em 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  letter-spacing: -.2px;
+  font-size: 18px;
+}
+
+input,
+button {
+  padding: .5em;
+  margin: .25em auto;
+  margin-right: .25em;
+  font-size: 16px;
+
+  @media only screen and (max-width: 600px) {}
+
+}
+
+
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+
+
+// emojis have to be tinier or they fuck up the line-height.
+.emoji {
+  font-size: 80%;
+  line-height: 100%;
+}
+
+.three-col {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .col {
+    width: 33%;
+
+    ul {
+      margin: 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      margin: 0;
+    }
+
+  }
+
+
+}

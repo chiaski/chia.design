@@ -1,0 +1,53 @@
+{
+  "name": "chia.design",
+  "version": "1.0.0",
+  "description": "This is the Chia website about Design",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiaski/chia.design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiaski/chia.design/issues"
+  },
+  "homepage": "https://github.com/chiaski/chia.design#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.0",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "imagemin": "github:imagemin/imagemin#bfd7c547045f68ed92243c6a772f6265a08a687f",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.1.0",
+    "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "scripts": {
+    "dev:assets": "webpack --watch",
+    "dev:start": "live-server --open=./public/ --host=localhost --watch=./public/ ",
+    "dev": "npm-run-all -p dev:*",
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "imagemin-cli": "^6.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "jquery": "^3.4.1"
+  }
+}
+

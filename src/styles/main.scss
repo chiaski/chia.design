@@ -1,0 +1,755 @@
+/* 
+
+    FONTS
+
+
+*/
+
+@font-face {
+  font-family: 'Times Now';
+  src: url('../fonts/TimesNow-LightItalic.woff2') format('woff2'),
+    url('../fonts/TimesNow-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Times Now';
+  src: url('../fonts/TimesNow-Light.woff2') format('woff2'),
+    url('../fonts/TimesNow-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Apercu Pro Mono';
+  src: url('../fonts/ApercuPro-Mono.woff2') format('woff2'),
+    url('../fonts/ApercuPro-Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alliance';
+  src: url('../fonts/AllianceNo1-RegularItalic.woff2') format('woff2'),
+    url('../fonts/AllianceNo1-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alliance';
+  src: url('../fonts/AllianceNo1-Regular.woff2') format('woff2'),
+    url('../fonts/AllianceNo1-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* 
+
+    SASS
+
+
+*/
+
+//    FONTS
+
+$sans: "Alliance";
+$mono: "Apercu Pro Mono";
+$serif: "Times Now";
+
+//    COLORS
+
+$b: #67686A;
+$gray: #55585a;
+$gray-light: #7e8183;
+$gray-lighter: #eaebeb;
+
+//    COLORS  :  ACCENTS
+
+$p: #eb80ff;
+
+a{
+  text-decoration: none;
+}
+
+body {
+  font-size: 1em;
+  font-family: $sans;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+  max-height: 100vh;
+  align-items: flex-start;
+  /*      border: 5px solid green;*/
+
+  @media only screen and (max-width: 800px) {
+    max-height: none;
+  }
+
+}
+
+
+.container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-height: 95vh;
+  width: 100%;
+  padding: 1em;
+
+  @media only screen and (max-width: 800px) {
+    max-height: none;
+  }
+
+}
+
+.container-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  vertical-align: middle;
+  align-content: middle;
+
+}
+
+.container-row#news{
+  
+  
+  a{
+    font-size: .8em;
+    width: 100%;
+  color: $p;
+    padding: .15em;
+    line-height: 20px;
+  }
+  
+}
+
+.container-row#intro {
+  min-width: 95vw;
+  padding: .5em 0;
+
+  p{
+    font-size: .8em;
+  }
+  
+  a._more {
+    display: inline;
+    color: $p;
+    letter-spacing: -.25px;
+  }
+
+  a._more:hover {
+    cursor: pointer;
+    color: $b;
+  }
+
+  input {
+    font-size: .8em;
+  }
+
+}
+
+h5#opener {
+  font-size: .6em;
+  font-weight: normal;
+  margin: 0;
+  color: $b;
+  width: 100%;
+  display: block;
+
+  strong {
+    color: $p;
+    font-weight: normal;
+  }
+
+}
+
+
+
+  .container-column {
+    opacity: 0.9;
+  }
+
+  .container-column ._this a {
+    font-size: .7em;
+    letter-spacing: -.25px;
+    padding: .15em .25em;
+    width: 100%;
+    display: block;
+    margin: .25em;
+    color: $b;
+  }
+
+  .container-column ._this a:hover {
+    opacity: 1;
+    cursor: ns-resize;
+    color:$p;
+  }
+
+#index {
+
+  height: auto;
+
+
+  .container-column ._this {
+    max-height: calc(75vh - 6em);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: $sans;
+    color: $gray;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+
+
+  // INDEX
+
+  .container-column ._this a[href*="https://"],
+  .container-column ._this a[href*="mailto:"],
+  .container-column ._this a[href*="."],
+  .container-column ._this a[onclick] {
+    color: $p;
+    text-decoration: none;
+  }
+
+  .container-column ._this a[href*="https://"]:hover,
+  .container-column ._this a[href*="mailto:"]:hover,
+  .container-column ._this a[href*="."]:hover,
+  .container-column ._this a[onclick]:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    cursor: pointer !important;
+  }
+
+  // SOUND
+  .__sound {
+    border-bottom: 1px solid $gray-lighter;
+    padding: 1em .5em;
+
+    font-size: .8em;
+    
+    u {
+      font-family: $mono;
+      text-transform: uppercase;
+      font-size: .5em;
+      text-decoration: none;
+      border: 1px solid $gray-lighter;
+      padding: .25em 1em;
+      border-radius: 20px;
+    }
+
+  }
+  
+  @media only screen and (max-width: 800px) {
+
+    max-height: none;
+    
+    .container-column{
+      height: auto;
+    }
+
+    .container-column ._this {
+      height: 300px;
+      overflow-x: hidden;
+    }
+
+  }
+  
+}
+
+
+.introduction p {
+  display: inline-block;
+  max-width: 450px;
+  line-height: 120%;
+  //  background: yellow;
+  font-size: .8em;
+  font-family: $sans;
+  text-indent: 40px;
+  color: $b;
+}
+
+.newsletter {
+  display: inline-block;
+  text-align: left;
+  font-size: .8em;
+
+  input[type=text] {
+    color: $b;
+    font-family: $mono;
+    letter-spacing: -.5px;
+    background: $gray-lighter;
+    outline: 0;
+    border: 1px transparent;
+  }
+
+  input[type=submit] {
+    color: $gray;
+    font-family: $mono !important;
+    border: 1px transparent;
+    outline: 0;
+    text-transform: uppercase;
+  }
+
+  input[type=submit]:hover {
+    color: $p;
+    box-shadow: 0 0 10px $p;
+    border: 1px solid $p;
+  }
+
+  input[type=text]:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px $p;
+    border: 1px solid $p;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .container-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .introduction {
+    padding: .5em 0;
+  }
+}
+
+
+.container-row#footer {
+
+  display: block;
+  color: $b;
+  border-bottom: 1px solid $gray-lighter;
+  padding: .25em 0 .5em 0;
+
+  h5 {
+    display: inline-block;
+    margin: 0;
+    font-weight: normal;
+    margin-right: 2.5em;
+  }
+
+  .contact {
+    font-size: .6em;
+
+    a {
+      color: $p;
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+.container-column {
+  border-right: 1px solid $gray-lighter;
+  flex-basis: 0;
+  flex-grow: 1;
+  height: 100%;
+  min-width: 200px;
+  overflow-y: hidden;
+  overflow-x:hidden;
+}
+
+.container-column:last-of-type {
+  border-right: 0;
+  margin: 0;
+}
+
+.container-column ._iam {
+  padding: .25em 0;
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.container-column ._iam h1 {
+  font-weight: normal;
+  font-family: $serif;
+  color: $b;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  padding: .15em .25em;
+  margin-bottom: 0;
+}
+
+.title {
+  position: absolute;
+  display: inline-block;
+  padding: .25em;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #000;
+}
+
+// QUIRKS
+
+#wip{
+  position: fixed;
+  top: 50vh;left: -8vw;
+  z-index: 9999;
+  width: 150vw;
+  background: $p;
+  padding: .25em;
+  transform: rotate(22deg);
+  box-shadow: 0 0 50px $p;
+  mix-blend-mode: exclusion;
+  color: #fff;
+}
+
+#no {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: $p;
+  color:#fff;
+  padding: 10vw;
+  font-size: 4em;
+  text-align: center;
+  letter-spacing: -2px;
+  z-index: 999;
+  display: none;
+}
+
+[draggable=true] {
+  cursor: move;
+}
+
+.pc {
+  border: 1px solid $gray;
+  padding: 1em;
+
+  object-fit: contain;
+  position: fixed;
+  z-index: 999;
+  mix-blend-mode: exclusion;
+  backdrop-filter: grayscale(80%) blur(50px);
+  z-index: 99;
+  display: none;
+
+  img {
+    padding: 1.5em 0 0 0;
+  }
+  
+  blockquote{
+    max-width: 300px;
+    margin: 0;
+    padding: 0;
+    padding-top: 1.5em;
+    font-family: $serif;
+    font-style: italic;
+  }
+
+  a {
+    position: absolute;
+    padding: 1em;
+    font-size: .5em;
+    width: 100%;
+    background: #000;
+    color: #fff;
+
+    height: 25px;
+    right: 0;
+    top: 0;
+    font-family: $mono;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  p {
+    padding-top: 2em;
+    max-width: 400px;
+    font-size: .8em;
+    line-height: 150%;
+  }
+
+}
+
+.pc._bg {
+  background: #fff;
+  box-shadow: 0 0 20px $p;
+}
+
+/*
+
+
+      OTHER PAGES
+
+
+*/
+
+// COVER
+
+#cover {
+
+
+  .inactive-links {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: auto;
+    vertical-align: text-bottom;
+
+  }
+
+  .inactive-links:hover a:not(:hover) {
+    opacity: 0.3;
+  }
+
+  .inactive-links a {
+    font-family: $serif;
+    font-size: 2em;
+    display: inline-block;
+    color: $gray-light;
+    text-decoration: none;
+    letter-spacing: -1px;
+    margin: 0 .5em;
+    vertical-align: -38px;
+
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    
+    cursor: pointer;
+  }
+
+  .inactive-links a._dead {
+    cursor: not-allowed;
+  }
+
+  .social-links a {
+    font-family: $mono;
+    color: $gray-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: .5em;
+
+    display: inline-block;
+    padding: .25em;
+    line-height: 50px;
+    vertical-align: middle;
+  }
+
+  .social-links a:hover {
+    color: $p;
+  }
+
+  @media only screen and (max-width: 800px) {
+
+    .inactive-links a {
+      font-size: 1.5em;
+      margin: 0 .25em;
+    }
+
+    .social-links a {
+      line-height: 100%;
+    }
+
+  }
+
+}
+
+.container-row#cover {
+
+  h1 {
+    font-family: "Times Now";
+    font-weight: normal;
+    letter-spacing: -2.5px;
+    font-size: 4em;
+    display: inline-block;
+    margin: 0;
+  }
+
+}
+
+
+// PROJECTS.HTML
+
+#page-projects {
+
+
+
+  .container-row#filter {
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em 0;
+
+    a {
+      margin-right: 1em;
+      padding: .25em;
+    }
+
+    a:hover {
+      color: $p;
+      cursor: pointer;
+    }
+    
+  @media only screen and (max-width: 800px) {
+    
+    a{
+      font-size: .8em;
+      margin-right: .5em;
+    }
+    
+    }
+  }
+
+  #projects {
+    
+    
+    .project-wrapper{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      padding: 1em 0;
+    }
+    
+    ._project{
+      
+      padding: .5em;
+      width: 30vw;
+      max-width: 380px;
+      object-fit: contain;
+      
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+      
+      
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+  max-width: 100%;
+  }
+
+      
+      
+      h2{
+        font-family: $serif;
+        font-weight: normal;
+        letter-spacing: -1px;
+        line-height: 80%;
+        font-size: 2em;
+        margin: 0;
+        
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear;
+        
+        color:$b;
+        
+        sup{
+          font-size: .3em !important;
+          letter-spacing: .25px;
+          font-family: $mono;
+          color:$gray-light;
+        }
+        
+      }
+      
+      p{
+        color: $b;
+        font-size: .8em;
+      }
+      
+      a{
+        color: $p;
+      }
+      
+      
+      img{
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+    
+    ._project:hover{
+      
+      cursor: pointer;
+      box-shadow: 0 0 20px $p;
+      
+      h2{
+        color: $p;
+      }
+      
+    }
+    
+    
+  }
+
+}
+
+
+// SOUNDS.HTML
+
+
+audio {
+  //  box-shadow: 0 0 10px $p;
+  border-radius: 50px;
+  height: 20px;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: .8em;
+}
+
+audio::-webkit-media-controls-panel {
+  margin-left: -1.5em;
+  border: 0;
+  background: #fff;
+  outline: 0;
+}
+
+
+// FUNCTIONAL
+
+.func-accordion {
+
+  width: 100%;
+
+  h4 {
+    text-transform: uppercase;
+    font-family: $mono;
+    font-weight: normal;
+    font-size: .5em;
+    border-bottom: 1px solid $gray-lighter;
+    color: $gray;
+    margin: .5em 0;
+    text-align: right;
+  }
+
+  h4:hover {
+    cursor: n-resize;
+  }
+
+}
