@@ -91,8 +91,18 @@ body {
 .container-row#intro {
   min-width: 95vw;
   padding: .5em 0; }
+  .container-row#intro .introduction {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column; }
   .container-row#intro p {
-    font-size: .8em; }
+    display: inline-block;
+    max-width: 350px;
+    line-height: 120%;
+    font-size: .8em;
+    font-family: "Alliance";
+    text-indent: 40px;
+    color: #67686A; }
   .container-row#intro a._more {
     display: inline;
     color: #eb80ff;
@@ -177,15 +187,6 @@ h5#opener {
       #index .container-column ._this {
         height: 300px;
         overflow-x: hidden; } }
-
-.introduction p {
-  display: inline-block;
-  max-width: 450px;
-  line-height: 120%;
-  font-size: .8em;
-  font-family: "Alliance";
-  text-indent: 40px;
-  color: #67686A; }
 
 .newsletter {
   display: inline-block;
@@ -300,48 +301,6 @@ h5#opener {
 
 [draggable=true] {
   cursor: move; }
-
-.pc {
-  border: 1px solid #55585a;
-  padding: 1em;
-  object-fit: contain;
-  position: fixed;
-  z-index: 999;
-  mix-blend-mode: exclusion;
-  backdrop-filter: grayscale(80%) blur(50px);
-  z-index: 99;
-  display: none; }
-  .pc img {
-    padding: 1.5em 0 0 0; }
-  .pc blockquote {
-    max-width: 300px;
-    margin: 0;
-    padding: 0;
-    padding-top: 1.5em;
-    font-family: "Times Now";
-    font-style: italic; }
-  .pc a {
-    position: absolute;
-    padding: 1em;
-    font-size: .5em;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    height: 25px;
-    right: 0;
-    top: 0;
-    font-family: "Apercu Pro Mono"; }
-  .pc a:hover {
-    cursor: pointer; }
-  .pc p {
-    padding-top: 2em;
-    max-width: 400px;
-    font-size: .8em;
-    line-height: 150%; }
-
-.pc._bg {
-  background: #fff;
-  box-shadow: 0 0 20px #eb80ff; }
 
 /*
 
@@ -476,20 +435,6 @@ h5#opener {
   box-shadow: 0 0 20px #eb80ff; }
   #page-projects #projects ._project:hover h2 {
     color: #eb80ff; }
-
-audio {
-  border-radius: 50px;
-  height: 20px;
-  background: transparent;
-  outline: none;
-  border: none;
-  font-size: .8em; }
-
-audio::-webkit-media-controls-panel {
-  margin-left: -1.5em;
-  border: 0;
-  background: #fff;
-  outline: 0; }
 
 .func-accordion {
   width: 100%; }
